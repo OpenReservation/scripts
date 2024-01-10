@@ -3,7 +3,8 @@ foreach (var scripts in GetScripts(root))
 {
     foreach (var script in scripts)
     {
-        CommandExecutor.ExecuteCommandAndOutput("dotnet-exec {script} --dry-run").EnsureSuccessExitCode();
+        Console.WriteLine($"Compile script {script} test");
+        CommandExecutor.ExecuteCommandAndOutput($"dotnet-exec {script} --dry-run").EnsureSuccessExitCode();
     }
 }
 
