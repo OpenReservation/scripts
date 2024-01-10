@@ -1,0 +1,26 @@
+name: default
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+    - 'build.sh'
+    - '**/*.cs'
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    name: Running tests on ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          8.x
+    - name: build
+      run: bash build.sh
