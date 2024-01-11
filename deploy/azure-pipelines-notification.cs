@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
 
 var messageTemplate = """
-The service {{$env SERVICENAME}} deploy with version {{$env IMAGENAME}}
+The service {{$env SERVICENAME}} has been deployed with version {{$env IMAGENAME}}
 RepoUrl: {{$env BUILD_REPOSITORY_URI}}
 [Amazing]
 """;
