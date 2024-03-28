@@ -1,5 +1,3 @@
-using System.Net.Http.Json;
-
 var messageTemplate = """
 The service {{$env SERVICENAME}} has been deployed with version {{$env IMAGENAME}}
 RepoUrl: {{$env BUILD_REPOSITORY_URI}}
@@ -25,3 +23,4 @@ using var response = await HttpHelper.HttpClient.PostAsJsonAsync(webhookUrl, new
         }
     });
 response.EnsureSuccessStatusCode();
+Console.WriteLine("Notification sent");
