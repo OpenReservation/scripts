@@ -1,7 +1,7 @@
 var messageTemplate = """
 The service {{$env SERVICENAME}} has been deployed with version {{$env IMAGENAME}}
 RepoUrl: {{$env BUILD_REPOSITORY_URI}}
-[Amazing]
+[amazingbot]
 """;
 var message = await WeihanLi.Common.Template.TemplateEngine.CreateDefault()
     .RenderAsync(messageTemplate);
