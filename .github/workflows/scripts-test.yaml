@@ -7,7 +7,7 @@ on:
     paths:
     - 'build.sh'
     - '**/*.cs'
-    - '.github/*'
+    - '.github/workflows/*'
   pull_request:
     branches:
       - "main"
