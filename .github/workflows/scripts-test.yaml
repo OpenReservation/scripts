@@ -20,7 +20,6 @@ jobs:
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: |
-          9.x
+        dotnet-version: 9.0.x
     - name: build
       run: bash build.sh
