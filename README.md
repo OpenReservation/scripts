@@ -18,7 +18,7 @@ kubectl apply -f https://github.com/OpenReservation/reservation-angular-client/r
 # notification
 kubectl apply -f https://github.com/OpenReservation/OpenReservation.Notification/raw/refs/heads/main/k8s/manifests/deployment.yaml
 # schedule-service
-kubectl apply -f https://github.com/OpenReservation/OpenReservation.ScheduleServices/blob/main/k8s/manifests/deployment.yaml
+kubectl apply -f https://github.com/OpenReservation/OpenReservation.ScheduleServices/raw/refs/heads/main/k8s/manifests/deployment.yaml
 # sparktodo
 # kubectl apply -f https://github.com/WeihanLi/SparkTodo/raw/refs/heads/main/sparktodo-api-k8s-deploy.yaml
 ```
