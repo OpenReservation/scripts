@@ -310,19 +310,17 @@ internal sealed class WorktreeInfo
 
 [JsonSourceGenerationOptions(GenerationMode = JsonSourceGenerationMode.Metadata)]
 [JsonSerializable(typeof(StatusLineInput))]
-internal partial class AppJsonContext : JsonSerializerContext
-{
-}
+internal partial class AppJsonContext : JsonSerializerContext;
 
 // ---- ANSI colors — plain constants, no allocation-heavy formatting needed.
 internal static class Color
 {
-    public const string Reset = "\u001b[0m";
-    public const string Cyan = "\u001b[36m";
-    public const string Green = "\u001b[32m";
-    public const string Yellow = "\u001b[33m";
-    public const string Red = "\u001b[31m";
-    public const string Magenta = "\u001b[35m";
+    public const string Reset = "\e[0m";
+    public const string Cyan = "\e[36m";
+    public const string Green = "\e[32m";
+    public const string Yellow = "\e[33m";
+    public const string Red = "\e[31m";
+    public const string Magenta = "\e[35m";
 }
 
 // ---- Git status, computed by shelling out to `git` (no libgit2/managed git
